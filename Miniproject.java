@@ -33,7 +33,7 @@ public class Miniproject {
 	}
 	 @Test (priority = 1)
 		 public void handleButtons() {
-		        driver.get("https://demoqa.com/buttons");
+		 driver.get("https://demoqa.com/buttons");
 		        
 		        // Click the Click Me 
 		        WebElement clickMeButton = driver.findElement(By.xpath("//button[text()='Click Me']"));
@@ -55,23 +55,23 @@ public class Miniproject {
 	   driver.get("https://demoqa.com/radio-button");
 			            
 			            
-			       WebElement yesRadio = driver.findElement(By.xpath("//label[@for='yesRadio']"));
-			       yesRadio.click();
+			    WebElement yesRadio = driver.findElement(By.xpath("//label[@for='yesRadio']"));
+			    yesRadio.click();
 			            
-			       WebElement outputText = driver.findElement(By.className("text-success"));
-			       Assert.assertEquals(outputText.getText(), "Yes", "Yes radio button not selected correctly");
+			    WebElement outputText = driver.findElement(By.className("text-success"));
+			    Assert.assertEquals(outputText.getText(), "Yes", "Yes radio button not selected correctly");
 			            
 			    }
 	    @Test (priority = 3)
 	      public void handleFrames() {
 	    	   
-	                 driver.get("https://demoqa.com/frames");
-	                 driver.switchTo().frame("frame1");
+	            driver.get("https://demoqa.com/frames");
+	            driver.switchTo().frame("frame1");
 	        
-	                 WebElement heading = driver.findElement(By.id("sampleHeading"));
-	                 Assert.assertEquals(heading.getText(), "This is a sample page");
+	            WebElement heading = driver.findElement(By.id("sampleHeading"));
+	            Assert.assertEquals(heading.getText(), "This is a sample page");
 	          
-	                 driver.switchTo().defaultContent();
+	            driver.switchTo().defaultContent();
 	    }
 	     @Test (priority = 4)
 	      public void handleDragAndDrop() {
